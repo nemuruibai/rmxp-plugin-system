@@ -1,5 +1,5 @@
 # Rxdata Versioning Utility
-### Version: 1.0.5
+### Version: 1.0.6
 
 ## By: Raku (rakudayo@gmail.com)
 ### Updated by: Gegerlan (gegerlan2@hotmail.com), Varun (radialapps@gmail.com)
