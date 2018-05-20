@@ -1,10 +1,10 @@
-#Rxdata Versioning Utility
-###Version: 1.0.5
+# Rxdata Versioning Utility
+### Version: 1.0.5
 
-##By: Raku (rakudayo@gmail.com)
-###Updated by: Gegerlan (gegerlan2@hotmail.com)
+## By: Raku (rakudayo@gmail.com)
+### Updated by: Gegerlan (gegerlan2@hotmail.com), Varun (radialapps@gmail.com)
 
-####**Introduction**
+#### Introduction
 
 Have you ever wanted to work on an RPG Maker XP (RMXP) or RPG Maker VX (RMVX) game with a group of friends, but ran into trouble with conflicts when multiple people edit the same rxdata files? If you want to safely and efficiently version the data in your game, then read on!
 
@@ -16,7 +16,7 @@ Some other ideas for plugins that could be written are:
 * A patcher script which downloads updates for your RGSS scripts.
 * A time and change logger script that records team member's work time between opening and closing RMXP or RMVX and a comment regarding their changes. 
 
-####**Features**
+#### Features
 
 _General_
 * Plugins are runnable on startup and on shutdown of the editor. For example, below plugins provide automatic importing of all versioned text files into .rxdata files before starting RMXP. When RMXP is closed, all .rxdata files are exported back into versionable text files.
@@ -34,14 +34,14 @@ _ScriptImporterExporter plugin_
 * Cleanup script (called clean.rb) provided to help identify stale scripts (i.e. scripts which are added in RPG Makers's script editor, exported, and then later removed from the script editor, but still remain in your scripts directory).
 
 
-####**Downloads**
+#### Downloads
 
 A demo project showing plugin system usage (Just extract archive somewhere and run Game.bat, instead of Game.rxproj).
 
 [RMXP Plugin System Demo (v1.0.5)](https://docs.google.com/viewer?a=v&pid=explorer&chrome=true&srcid=0B3Y-YsSmakHrNWYzNjA5YzktNGJkZS00YWM5LTg0NDEtMmJiOGQ3YWFmNTUx&hl=en)
 
 
-####**Sample Files**
+#### Sample Files
 
 A sample YAML file exported from System.rxdata.
 
@@ -64,7 +64,7 @@ Sample Game.bat output (verbose mode)
 [Sample output for Game.bat](https://gist.github.com/1289787)
 
 
-####**Instructions**
+#### Instructions
 _Requirements_
 
 * Ruby Interpreter - Get the [most recent version here](http://www.ruby-lang.org/en/). It is required to run the utility scripts outside of RMXP. You will need a version with the YAML and Zlib modules.
@@ -105,7 +105,7 @@ _What to Version_
 * Game.bat file
 
 
-####**FAQ**
+#### FAQ
 
 * _Does this utility work for RMVX?_
 
@@ -132,25 +132,25 @@ _What to Version_
     should automatically execute from the batch script when you close RMXP.
 
 
-####**Compatibility**
+#### Compatibility
 
 I'm unsure of compatibility with SDK.
 This utility should be compatible with any script modifications, since it runs outside of RMXP and treats scripts as data. However, you may experience problems if you have directly modified any of the classes in the RPG module. In general, one should not directly modify these classes, but in case you have, I've included a Ruby file for RGSS modifications (the default location is /Utility/rmxp/rgss_mod.rb). You will need to add your changes to that file so that they can be automatically picked up by the importer/exporter scripts.
 
 
-####**Credits and Thanks**
+#### Credits and Thanks
 
 * vgvgf: I modified his [Table, Color, and Tone class implementations](http://www.hbgames.org/forums/viewtopic.php?t=49838) in Ruby.
 * Yeyinde: His [forum topic here](http://www.hbgames.org/forums/viewtopic.php?f=11&t=21163) helped me figured out how to load the compressed scripts from the Scripts.rxdata file.
 * Haraberu: For making the RGSS2 classes available.
 
 
-####**Author's Notes**
+#### Author's Notes
 
 * THIS UTILITY MODIFIES YOUR PROJECT'S .rxdata FILES! Make sure to back them up before using it.
 * If you need Ruby implementations of the Table, Color, and Tone classes that can load and dump the .rxdata files that RMXP can read, they are included in the utility in rgss_internal.rb, or you can email me and I'll send them to you. :)
 
 
-####**Terms and Conditions**
+#### Terms and Conditions
 
 This utility is free for any use, commercial or otherwise.
